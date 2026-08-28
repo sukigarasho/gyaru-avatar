@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: var(--vscode-font-family, sans-serif);
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 390px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+canvas#avatar-canvas {
+  width: 100%;
+  display: block;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+  color: var(--vscode-foreground, #333);
+}

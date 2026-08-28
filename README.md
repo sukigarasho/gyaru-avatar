@@ -117,7 +117,20 @@ npx vsce package
 
 コード変更後に常駐版へ反映したい場合は、`npm run compile && npx vsce package` を再実行し、VSIXから再インストールする（自動リロードはされない）。
 
+## フォークして自分用に使う場合
+
+このリポジトリをベースに改造する場合、以下は環境依存なので自分のパスに書き換えること。
+
+- **`~/.claude/settings.json` のhooksコマンド**: `hooks/notify-avatar.sh` を絶対パスで指定している。READMEの「Claude Code Hooksとの連携」に載せている例のパスは筆者の環境のものなので、自分がリポジトリをクローンした場所のパスに差し替える。
+- **`media/placeholder.png`**: 暫定表示用の静止画。好きなイラストに差し替えてOK。
+- **`media/avatar.riv`**: 自分でRiveエディタで作った`.riv`を置けば、暫定画像から自動でRive再生に切り替わる（仕様は上の「イラスト（Rive）の作り方・配置」を参照）。
+- **`package.json`の`publisher`**: VSCode Marketplaceに公開する予定がなければ何でもよい（ローカルインストール・VSIX配布のみなら未使用）。
+
 ## 既知の制約
 
 - `~/.claude/avatar-state.json` を直接fs.watchで監視しているため、ファイルシステムイベントの取りこぼしが極稀に起こりうる（デバウンス80msで簡易対応）。
 - `.riv` ファイルの内部構造（State Machine名・入力名）が仕様と一致していないと、canvasは表示されるがアニメーションが状態に追従しない。
+
+## ライセンス
+
+[MIT](./LICENSE)

@@ -4,6 +4,7 @@
   "description": "Claude Codeの状態(考え中/作業中/待機中/完了)に合わせて表情が変わるアバターをサイドバーに表示",
   "version": "0.1.0",
   "publisher": "sho-sukigara-local",
+  "license": "MIT",
   "private": true,
   "engines": {
     "vscode": "^1.85.0"
